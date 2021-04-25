@@ -1,23 +1,37 @@
+# _targets.R
 library(targets)
-# This is an example _targets.R file. Every
-# {targets} pipeline needs one.
-# Use tar_script() to create _targets.R and tar_edit()
-# to open it again for editing.
-# Then, run tar_make() to run the pipeline
-# and tar_read(summary) to view the results.
 
-# Define custom functions and other global objects.
-# This is where you write source(\"R/functions.R\")
-# if you keep your functions in external scripts.
-summ <- function(dataset) {
-  summarize(dataset, mean_x = mean(x))
-}
+# import all required packages for the analysis (minus targets)
+tar_option_set(packages = c("dplyr","janitor","ggplot2","readr"))
 
-# Set target-specific options such as packages.
-tar_option_set(packages = "dplyr")
+# import functions from a different file
+source("R/functions.R")
 
-# End this file with a list of target objects.
+# set up options
+options(tidyverse.quiet = TRUE)
+
+# end the file with a list of target objects.
 list(
-  tar_target(data, data.frame(x = sample.int(100), y = sample.int(100))),
-  tar_target(summary, summ(data)) # Call your custom functions as needed.
+  # get raw data path
+  tar_target(raw_data_file,
+             "data/raw_data/raw_data_file.csv",
+             format = "file"),
+  # load in raw data
+  tar_target(raw_data,
+             read_data(raw_data_file)),
+  # clean raw data
+  tar_target(clean_data,
+             data_cleaning(raw_data)),
+  # save cleaned data
+  tar_target(clean_data_file,
+             save_clean_data(clean_data),
+             format = "file"),
+  # analyze data
+  tar_target(summary,
+             analysis_function(clean_data)),
+  #visualize data
+  tar_target(plot_file,
+             viz_function(clean_data),
+             format = "file")
+  
 )

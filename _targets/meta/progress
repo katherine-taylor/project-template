@@ -1,5 +1,3 @@
 name|type|parent|branches|progress
-data|stem|data|0|started
-data|stem|data|0|built
-summary|stem|summary|0|started
-summary|stem|summary|0|built
+clean_data_file|stem|clean_data_file|0|started
+clean_data_file|stem|clean_data_file|0|built

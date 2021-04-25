@@ -1,4 +1,13 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|iteration|parent|children|seconds|warnings|error
 summ|function|725b50cbf04a3ed2||||||||||||||
-data|stem|ab34b97e83baa6bb|4d28b3ae61066c9f|15669340fa0be499|1588979285||t18742.631250286s|91d375b86ccd1383|454|rds|vector|||0.294||
-summary|stem|da883ffef85b4ea3|504e748dde9ca536|63f0902afed9cf85|760118442||t18742.6312510415s|4956b68a23f9e1fc|122|rds|vector|||0.019||
+plot_file|stem|32591aad92ac995f|b7e5b6745573f4c1|3acb95cc6bb8c27b|1042127703|figures/plot.png|t18742.6590180157s|8658758b4503d3b5|270599|file|vector|||2.428|Removed 2 rows containing missing values geom_point.|
+viz_function|function|74600210848f3a80||||||||||||||
+save_clean_data|function|1cfda08b30df2b85||||||||||||||
+data_cleaning|function|c2e95c64c5fc878c||||||||||||||
+analysis_function|function|e8e83ff20034a892||||||||||||||
+read_data|function|d60f197b01120605||||||||||||||
+raw_data_file|stem|8f28a4c039733110|73f4cfeca6843be7|ef46db3751d8e999|2110307107|data/raw_data/raw_data_file.csv|t18742.6568308369s|23b0aa04dd61bd70|15241|file|vector|||0.93||
+raw_data|stem|c74278dbf670f08b|614c74fe49122b4b|7bb7dcc215748082|-979620141||t18742.6587409177s|4c431b8a6f89e2a7|3158|rds|vector|||1.144||
+clean_data|stem|c74278dbf670f08b|2faa8ff11fd61402|190bca40f1150695|-1026135149||t18742.6587424136s|4c431b8a6f89e2a7|3158|rds|vector|||0.086||
+summary|stem|775b728bc0967c17|5b3e7029e3632f1d|4ec665aae3904943|760118442||t18742.6590182238s|659f690e2fa4f91c|449|rds|vector|||0.005||
+clean_data_file|stem|8f28a4c039733110|32bab9f8e06a5afa|ef56b3b76b56e902|94873518|data/clean_data/clean_data.csv|t18742.6594764621s|23b0aa04dd61bd70|15241|file|vector|||1.144||
